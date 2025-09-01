@@ -1,0 +1,212 @@
+:root{
+    --primary-color: #1CDA5B;
+    --brand-color: #3DF57A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
+}
+
+body{
+    font-family: "Heebo", sans-serif;
+}
+
+h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+p{
+    margin: 10px 0;
+    font-weight: 200;
+}
+
+img{
+    width: 100%;
+}
+
+.highlight{
+    color: var(--brand-color);
+}
+
+
+/* Navbar  */
+.navbar{
+    height: fit-content;
+    width: 90%;
+    padding: 20px;
+    position: absolute;
+    justify-self: center;
+}
+
+.logo img{
+    height: 24px;
+    width: auto;
+    display: block;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #AFAFAF;
+    padding: 12px;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar nav a:hover{
+    color: var(--primary-color);
+    font-weight: 500;
+    border-bottom: 1px var(--brand-color) solid;
+}
+
+.navbar button{
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.navbar .container {
+    background-color: black;
+    border-top: #919191;
+    border-bottom: white;
+    border-width: 0.5px;
+    border-bottom-style: outset;
+    border-top-style: inset;
+    border-top-width: 55;
+}
+
+
+/* Hero */
+.hero{
+    height: fit-content;
+    background-color: black;
+    color: white;
+    padding: 100px 80px 40px;
+}
+
+.hero h1 {
+    font-size: 4.5vmax !important;
+    font-optical-sizing: auto;
+    font-weight: 500 ;
+    line-height: 1.2;
+}
+
+.hero p{
+    margin: 20px 0;
+}
+
+.hero img{
+    height: auto;
+    width: 100%;
+    justify-self:flex-start;
+}
+
+/* Features */
+.features {
+    padding-top: 40px;
+    padding: 40px 80px 0px
+}
+.features-heading {
+    font-size: 24px;
+}
+
+.feature-card {
+    background-color: #171717;
+    border-radius: 10px;
+    color: white;
+    box-shadow: inset 5px 10px 10px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.feature-card img {
+    max-height: 400px;
+    width: auto;
+}
+
+
+.card {
+    background-color: #C6C6C6;
+    border-radius: 10px;
+    color: black;
+    box-shadow: inset 5px 10px 10px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.insights {
+    padding-top: 40px;
+}
+
+.insights .container {
+    align-items: flex-start;
+}
+
+.insights .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.insights .grid > *:first-child {
+    grid-column: 1 / span 2;
+}
+
+.insights .stats {
+    padding: 100px 0;
+}
+
+
+/* Footer */
+.footer .logo img{
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #AFAFAF;
+    padding: 12px;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* Tablets and Under */
+@media(max-width: 786px) {
+    .grid,
+    .hero .grid,
+    .features .grid,
+    .insights .grid,
+    .download .grid, 
+    .footer .grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* Mobile */
+@media(max-width: 500px) {
+
+}
