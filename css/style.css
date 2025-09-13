@@ -73,6 +73,10 @@ img{
     border: none;
 }
 
+.navbar button.btn.mobile-btn {
+    display: none;
+}
+
 .navbar .flex{
     justify-content: space-between;
 }
@@ -87,6 +91,24 @@ img{
     border-top-width: 55;
 }
 
+i { 
+    font-family: FontAwesome !important; 
+    font-style: normal;
+}
+
+.icons {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.icons #close {
+    font-size: 1.8rem;
+}
+
+#check {
+    display: none;
+}
 
 /* Hero */
 .hero{
@@ -116,8 +138,9 @@ img{
 /* Features */
 .features {
     padding-top: 40px;
-    padding: 40px 80px 0px
+    padding: 40px 80px 0px;
 }
+
 .features-heading {
     font-size: 24px;
 }
@@ -127,16 +150,13 @@ img{
     border-radius: 10px;
     color: white;
     box-shadow: inset 5px 10px 10px rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 20px;
-
+    padding: 30px 30px 20px;
 }
 
 .feature-card img {
     max-height: 400px;
     width: auto;
 }
-
 
 .card {
     background-color: #C6C6C6;
@@ -147,13 +167,14 @@ img{
     margin: 20px;
 }
 
-
+/* Statistics */
 .insights {
-    padding-top: 40px;
+    padding: 40px 80px 0px;
 }
 
 .insights .container {
-    align-items: flex-start;
+    align-items: center;
+
 }
 
 .insights .grid {
@@ -203,7 +224,60 @@ img{
     .footer .grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .navbar #navy {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        height: 0;
+        width: 80%;
+        background: #121212;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        box-shadow: 0 0.2rem .5rem rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~nav#navy {
+        height: 13rem;
+    }
+
+    .icons {
+        display: inline-block;
+    }
+
+
+    .icons #close{
+        display: none;
+    }
+
+    #check:checked~.icons #menu {
+        display: none;
+    }
+
+    #check:checked~.icons #close {
+        display: block;
+    }
+
+    .navbar nav ul {
+        display: block;
+        margin: 1.5rem 0;
+        color: #FFF;
+        text-align: center;
+    }
+
+    .navbar nav li {
+        margin: 2rem 0;
+    }
+
+    .navbar button.btn.desktop-btn {
+        display: none;
+    }
+
+    .navbar button.btn.mobile-btn {
+        display: inline;
+    }
 }
 
 /* Mobile */
