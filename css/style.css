@@ -11,6 +11,7 @@
 
 body{
     font-family: "Heebo", sans-serif;
+    overflow-x: hidden;
 }
 
 h2, h3, h4, h5 {
@@ -30,13 +31,20 @@ img{
     color: var(--brand-color);
 }
 
+.logo-lg {
+    height: 5rem;
+    width: auto;
+}
+
 
 /* Navbar  */
 .navbar{
     height: fit-content;
     width: 90%;
     padding: 20px;
-    position: absolute;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     justify-self: center;
 }
 
@@ -115,7 +123,7 @@ i {
     height: fit-content;
     background-color: black;
     color: white;
-    padding: 100px 80px 40px;
+    padding: 40px 80px 40px;
 }
 
 .hero h1 {
@@ -133,6 +141,18 @@ i {
     height: auto;
     width: 100%;
     justify-self:flex-start;
+}
+
+.hero::before {
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    z-index: 0;
 }
 
 /* Features */
@@ -191,20 +211,42 @@ i {
 
 
 /* Footer */
+.footer {
+    color: #AFAFAF;
+    padding: 40px 80px;
+}
+
 .footer .logo img{
     height: 48px;
     width: auto;
     display: block;
 }
 
+.footer .social a {
+    margin: 0 10px;
+}
+
+.footer p a {
+    color: var(--primary-color);
+}
+
+.footer .links {
+    text-align: end;
+}
+
+.footer nav {
+    margin: 10px 0;
+}
+
 .footer ul {
     list-style: none;
     display: flex;
+    justify-content: end;
     padding: 0;
     margin: 0;
 }
 
-.footer a {
+.footer .links ul a {
     text-decoration: none;
     color: #AFAFAF;
     padding: 12px;
@@ -212,6 +254,115 @@ i {
     font-size: 16px;
     font-weight: 400;
 }
+
+.footer .links ul a:hover {
+    color: var(--primary-color);
+}
+
+
+.footer .copy {
+    text-align: center;
+}
+
+/* Privacy Policy Page */
+#floating-btn {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 5%;
+    bottom: 20px;
+}
+
+.content {
+    width: 80%;
+    justify-self: center;
+    padding: 20px 0 80px;
+}
+
+.content ul{
+    padding-inline-start: 40px;
+    padding-bottom: 20px;
+}
+
+.content section {
+    padding: 10px 0;
+}
+
+.content h2, h3, h4, h5 {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.content h2 {
+    font-weight: 700;
+}
+
+.content #toc ul{
+    list-style: none;
+}
+
+.table-container {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.category-column {
+    width: 20%;
+    font-weight: 500;
+}
+
+.examples-column {
+    width: 60%;
+}
+
+.collected-column {
+    width: 20%;
+    text-align: center;
+}
+
+.collected-yes {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.collected-no {
+    color: #dc3545;
+    font-weight: bold;
+}
+
 
 
 /* Tablets and Under */
