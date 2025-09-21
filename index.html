@@ -25,10 +25,10 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <!-- <li><a href="contact.html">Contact</a></li> -->
-                    <a href="" class="btn mobile-btn">Get Early Access</a>
+                    <a href="access.html" class="btn mobile-btn">Get Early Access</a>
                 </ul>
             </nav>
-            <a href="" class="btn desktop-btn">Get Early Access</a>
+            <a href="access.html" class="btn desktop-btn">Get Early Access</a>
 
             
             <label for="check" class="icons">
@@ -46,7 +46,8 @@
                 <h1>Track Easy. <br><span class="highlight">Train Smarter.</span></h1>
                 <p>Grin&Gain redefines workout tracking to help you <br>see the progress you're looking for.</p>
                 <div class="download container flex">
-                    <a href=""><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt=""></a>
+                    <!-- <a href=""><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt=""></a> -->
+                    <a href="https://testflight.apple.com/join/AYym5Asy" class="lg-btn">iOS Early Access</a>
                     <a href="https://appdistribution.firebase.dev/i/ebb5a1db26030a45" class="lg-btn">Android Early Access</a>
                 </div>
             </div>
@@ -86,7 +87,7 @@
             <div class="container grid">
                 <div class="description px-3">
                     <h2 class="features-heading my-2">Adjust Your Routines Automatically</h2>
-                    <p class="text-secondary">Utilize custom or automatic adjustments to best progress through your workouts and build strength.</p>
+                    <p class="text-secondary">Take the guesswork out of training with automatic or custom workout adjustments that keep your routines progressing and your strength building consistently.</p>
                 </div>
                 <div class="feature-card"> 
                     <!-- add gif of adjusting your workout on end screen: too hard, okay, too easy-->
@@ -97,93 +98,37 @@
 
         <!-- Insights Section -->
         <section class="insights">
-            <div class="container">
-                <div class="accordion-wrap">
-                    <div id="insights-intro">
-                        <div class="insights-tab hide">
-                            <h3>Insights</h3>
-                        </div>
-                        <div class="insights-content">
-                            <h2 class="font-weight-bold">Get Insights That Drive Progress</h2>
-                            <br>
-                            <p class="text-secondary">View your progress with detailed graphs and statistics. Get daily and weekly reports to track exercises, muscles worked, and more. </p>
-                            <br>
-                            <button onClick="explore()">Explore Graphs <i class="fas fa-angle-right mr-2 ml-1"></i></a>
-                        </div>
-                    </div>
-                    <div class="all-insights">
-                        <div id="exercise" class="insight exercise">
-                            <div class="tab-cover" onClick="openinsight(this)">
-                                <div class="cover-content">
-                                    <h4>Exercise Insights</h4>
-                                    <div>
-                                        <button>View</button>
-                                    </div>
-                                </div>
-                                <img class="tab-bg" src="css/images/HEIM_IndustrialRodEnds.jpg">
-                            </div>
-                            <div class="item-content">
-                                <p>See Insights for each exercise including volume, max weight, and progress over time.
-                                    <ul>
-                                        <li>Estimated 1RM</li>
-                                        <li>Average Strength</li>
-                                        <li>Relative Intensity</li>
-                                        <li>Volume</li>
-                                    </ul>
-                                </p>               
-                            </div>
-                        </div>
-                        <div id="weekly" class="insight weekly">
-                            <div class="tab-cover"  onClick="openinsight(this)">
-                                <div class="cover-content">
-                                    <h4>Weekly Improvements</h4>
-                                    <div>
-                                        <button>View</button>
-                                    </div>
-                                </div>
-                                <img class="tab-bg" src="css/images/HEIM_JournalBearings.jpg">
-                            </div>
-                            <div class="item-content">
-                                <p>In the Insights Page, get a glimpse of your weekly progress. See your progress for each exercise in comparison to the prior week.
-                                </p>
-                                <img src="images/weekly.png" alt="">
-                            </div>
-                        </div>
-                        <div id="progress" class="insight progress">
-                            <div class="tab-cover"  onClick="openinsight(this)">
-                                <div class="cover-content">
-                                    <h4>Overall Progress</h4>
-                                    <div>
-                                        <button>View</button>
-                                    </div>
-                                </div>
-                                <img class="tab-bg" src="css/images/SphericalPlainBearings.png">
-                            </div>
-                            <div class="item-content">
-                                <p>In the Progress Page, you can get an overview of your Training Metrics through various graphs. 
-                                    
-                                    <br><br>Underneath Graph Options you can view progress of all routines or specific routine.     
-                                    
-                                    <br><br>You can further choose to view the data per session, weekly, or monthly (the x-axis; each data point on the graph)
-                                <br><br></p>
-                                <img src="images/Training Progress.png" alt="">
-                                <img src="images/Periodic Trends.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="team-title text-center">
+                <h2 class="py-1">Get Insights That Drive Progress</h2>
+                <p>View your progress with detailed graphs and statistics. Get daily and weekly reports to track exercises, muscles worked, and more.</p>
+            </div>
+            <div class="container grid grid-3 text-center">
+                <div class="insight">
+                    <img src="images/Exercise.png" alt="">
+                    <h3>Exercise Insights</h3>
+                    <p class="text-secondary px-1">Go beyond sets and reps with detailed breakdowns for each of your exercises like Estimated 1RM and Average Strength—giving you a clear picture of your true performance.</p>
+                </div>
+                <div class="insight">
+                    <img src="images/Weekly.png" alt="">
+                    <h3>Weekly Improvements</h3>
+                    <p class="text-secondary px-1">See how you’re progressing week by week with automatic comparisons that highlight your gains, so you always know where you’re improving.</p>
+                </div>
+                <div class="insight">
+                    <img src="images/Overall.png" alt="">
+                    <h3>Overall Progress</h3>
+                    <p class="text-secondary px-1">Track the bigger picture of your fitness journey through raw numbers or clear trend lines, showing your average percentage changes from your baseline.</p>
                 </div>
             </div>
-        </section>       
-
+        </section>
 
         <section class="download py-4">
             <div class="container grid">
                 <div class="text-center">
                     <h2 class="my-2">Ready to Start Tracking?</h2>
-                    <p>Download our latest release on ios or android today.</p>
+                    <p>Download our latest release on iOS or Android today.</p>
                     <div class="download-btns container flex">
-                        <a href=""><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt=""></a>
-                        <a href="" class="lg-btn">Android Early Access</a>
+                        <a href="https://testflight.apple.com/join/AYym5Asy" class="lg-btn"> iOS Early Access</a>
+                        <a href="https://appdistribution.firebase.dev/i/ebb5a1db26030a45" class="lg-btn">Android Early Access</a>
                     </div>
                 </div>
                 <img src="images/Mockup.png" alt="">
@@ -208,7 +153,7 @@
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="resources.html">Resources</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Get Early Access</a></li>
                     </ul>
                 </nav>
                 <nav>
@@ -218,11 +163,10 @@
                     </ul>
                 </nav>
                 <p>Interested in Joining the Team? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBqMpMcbBKnFyB0V9BKCLgO62m8xLoEIJi52ct6YyI6wP_5w/viewform">Let Us Know!</a></p>
-
+                <p>Want to Report a Bug? Or give us Feedback? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBqMpMcbBKnFyB0V9BKCLgO62m8xLoEIJi52ct6YyI6wP_5w/viewform">Tell Us Here</a></p>
             </div>
         </div>
         <p class="copy">Copyright &copy; 2025 Grin&Gain. All Rights Reserved</p>
-    </section> 
-    <script src="./js/insights.js"></script>  
+    </section>  
 </body>
 </html>
