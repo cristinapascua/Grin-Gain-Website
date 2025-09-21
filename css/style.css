@@ -6,7 +6,6 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px
 }
 
 body{
@@ -18,9 +17,19 @@ h2, h3, h4, h5 {
     font-weight: 500;
 }
 
+h2 {
+    font-size: 3vmax !important;
+    line-height: 1.2;
+}
+
 p{
-    margin: 10px 0;
-    font-weight: 200;
+    padding-bottom: 10px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.text-secondary {
+    padding-bottom: 0.5rem;
 }
 
 img{
@@ -29,6 +38,11 @@ img{
 
 .highlight{
     color: var(--brand-color);
+}
+
+.highlight-2{
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 .logo-lg {
@@ -49,7 +63,7 @@ img{
 }
 
 .logo img{
-    height: 24px;
+    height: 32px;
     width: auto;
     display: block;
 }
@@ -76,12 +90,13 @@ img{
     border-bottom: 1px var(--brand-color) solid;
 }
 
-.navbar button{
+.navbar a.btn{
     background-color: var(--primary-color);
+    color: black;
     border: none;
 }
 
-.navbar button.btn.mobile-btn {
+.navbar a.btn.mobile-btn {
     display: none;
 }
 
@@ -97,6 +112,11 @@ img{
     border-bottom-style: outset;
     border-top-style: inset;
     border-top-width: 55;
+}
+
+.navbar .active {
+    color: white;
+    font-weight: 500;
 }
 
 i { 
@@ -121,9 +141,10 @@ i {
 /* Hero */
 .hero{
     height: fit-content;
-    background-color: black;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
     color: white;
-    padding: 40px 80px 40px;
+    padding: 40px 80px 90px;
 }
 
 .hero h1 {
@@ -135,15 +156,51 @@ i {
 
 .hero p{
     margin: 20px 0;
+    color: #AFAFAF;
+}
+
+.download {
+    justify-content: start !important;
+    align-items: center;
+    padding-left: 0 !important;
+    gap: 20px;
+}
+
+.download .lg-btn {
+    font-size: 16px !important;
+    height: 100% !important;
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: black;
+}
+
+.download a img {
+    display: inline-block;
+    height: 48px;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.download-btns
+{
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0 !important;
+}
+
+.download-btns .lg-btn {
+    background-color: var(--primary-color);
 }
 
 .hero img{
     height: auto;
-    width: 100%;
+    width: 90%;
     justify-self:flex-start;
 }
 
-.hero::before {
+.hero::before,
+.about-head::before {
     background-color: black;
     content: '';
     position: absolute;
@@ -151,30 +208,63 @@ i {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 90px;
+    height: 100px;
     z-index: 0;
+}
+
+main
+{
+    width: 70%;
+    justify-self: center;
 }
 
 /* Features */
 .features {
-    padding-top: 40px;
-    padding: 40px 80px 0px;
+    padding: 40px 0;
+}
+
+.features .container {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.features .grid {
+    grid-template-columns: 45% 55%;
+    align-items: center;
+}
+
+.features .flip {
+    grid-template-columns: 55% 45% !important;
 }
 
 .features-heading {
-    font-size: 24px;
+    font-size: 36px;
+    text-align: left;
+}
+
+.features .description {
+    text-align: left;
+    width: 80%;
+}   
+
+.features .description p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .feature-card {
     background-color: #171717;
-    border-radius: 10px;
+    border-radius: 30px;
     color: white;
     box-shadow: inset 5px 10px 10px rgba(255, 255, 255, 0.1);
     padding: 30px 30px 20px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #1b1b1b, #0c0c0c);
 }
 
 .feature-card img {
-    max-height: 400px;
+    max-height: 500px;
     width: auto;
 }
 
@@ -185,28 +275,6 @@ i {
     box-shadow: inset 5px 10px 10px rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin: 20px;
-}
-
-/* Statistics */
-.insights {
-    padding: 40px 80px 0px;
-}
-
-.insights .container {
-    align-items: center;
-
-}
-
-.insights .grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.insights .grid > *:first-child {
-    grid-column: 1 / span 2;
-}
-
-.insights .stats {
-    padding: 100px 0;
 }
 
 
@@ -364,6 +432,265 @@ i {
 }
 
 
+/* About Page */
+.about-head {
+    padding: 40px 200px 90px;
+}
+
+.about-head .grid {
+    grid-template-columns: 40% 60%;
+}
+
+.about-title h1 {
+    font-size: 32px !important;
+    font-optical-sizing: auto;
+    font-weight: 400 ;
+    line-height: 1.2;
+    padding-bottom: 20px;
+}
+
+.italic {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: italic !important;
+    font-weight: 300 !important;
+}
+
+.team-title {
+    padding: 0 80px 40px;
+}
+
+.team-members .grid {
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    padding-bottom: 40px;
+    align-items: end;
+}
+
+.member-card img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* Insights & Statistics */
+.insights{
+    padding: 80px 0;
+
+}
+
+.accordion-wrap{
+    height: 500px;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    margin: 0px;
+}
+
+#insights-intro{
+    display: flex;
+    overflow: hidden;
+}
+
+.insights-tab{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #068932;
+}
+
+.insights-tab h3{
+    color: #fff;
+    transform: rotate(-90deg);
+    font-weight: 500;
+}
+
+.insights-content{
+    width: 450px;
+    padding: 15px;
+    /*
+    -moz-transition: width 0.4s ease-out;
+    transition: width 0.4s ease-out;
+  */
+}
+
+.insights-content button{
+    color: #068932;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+}
+
+.insights-content button:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.hide{
+    width: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.description ul{
+    display: inherit;
+    list-style-type: circle;
+    padding-inline-start: 40px;
+}
+/*--code for insight cards--*/
+
+.all-insights{
+    position: relative;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.insight{
+    position: absolute;
+    display: flex;
+}
+
+.insight:nth-child(1){
+    left: 0%;
+}
+
+.insight:nth-child(2){
+    left: 175px;
+}
+
+.insight:nth-child(3){
+    left: 350px;
+}
+
+/*--code for insight cards tab covers--*/
+.all-insights .tab-cover{
+    width: 170px;
+    height: 500px;
+    border: 1px solid #000;
+    padding: 24px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tab-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.exercise .tab-bg{
+    width: 150%;
+    top: 100px;
+    left: -25px;
+}
+
+.weekly .tab-bg{
+    width: 110%;
+    top: 20px;
+    left: -10px;
+}
+
+.progress .tab-bg{
+    width: 100%;
+    top: 25px;
+}
+
+.inactive .tab-bg{
+    opacity: 0.6;
+}
+
+.tab-cover:hover{
+    cursor: pointer;
+}
+
+.cover-content h4{
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cover-content button{
+    width: 80px;
+    height: 30px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 2px solid #068932;
+    border-radius: 15px;
+}
+
+.active button{
+    visibility: hidden;
+}
+
+.inactive button{
+    background-color: #068932;
+    color: #fff;
+}
+
+.tab-cover button:hover{
+    background-color: #068932;
+    color: #fff;
+}
+
+.item-content{
+    width: 0px;
+    height: 500px;
+    overflow: hidden;
+    /*
+    -moz-transition: width 0.4s ease-out;
+    transition: width 0.4s ease-out;
+    */
+}
+
+.active .item-content{
+    width: 500px;
+    padding: 20px 40px;
+    overflow-y: auto;
+    display: inline;
+    background-color: #f5f5f5;
+}
+
+.item-content p{
+    margin-bottom: 5px;
+}
+
+.insight-link{
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 2px;
+}
+
+.insight-link:hover{
+    background-color: #b1b1b1;
+    color: #fff !important;
+}
+
+.insight-link i{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+
+
 
 /* Tablets and Under */
 @media(max-width: 786px) {
@@ -372,9 +699,24 @@ i {
     .features .grid,
     .insights .grid,
     .download .grid, 
-    .footer .grid {
+    .footer .grid,
+    .about-head .grid,
+    .team-members .grid {
         grid-template-columns: 1fr;
     }
+
+    .features .flip {
+        grid-template-columns: 1fr !important;
+    }
+
+    .features .description {
+        order: 1 !important;
+    }
+
+    .features .feature-card {
+        order: 2 !important;
+    }
+    
 
     .navbar #navy {
         position: absolute;
@@ -422,12 +764,20 @@ i {
         margin: 2rem 0;
     }
 
-    .navbar button.btn.desktop-btn {
+    .navbar a.btn.desktop-btn {
         display: none;
     }
 
-    .navbar button.btn.mobile-btn {
+    .navbar a.btn.mobile-btn {
         display: inline;
+    }
+
+    .about-head {
+        padding: 40px 40px 80px;
+    }
+
+    .team-title {
+        padding: 0;
     }
 }
 
