@@ -148,7 +148,7 @@ i {
 }
 
 .hero h1 {
-    font-size: 4.5vmax !important;
+    font-size: 5vmax !important;
     font-optical-sizing: auto;
     font-weight: 500 ;
     line-height: 1.2;
@@ -200,7 +200,7 @@ i {
 }
 
 .hero::before,
-.about-head::before {
+.head::before {
     background-color: black;
     content: '';
     position: absolute;
@@ -277,6 +277,20 @@ main
     margin: 20px;
 }
 
+/* Insights & Statistics */
+.insights{
+    padding: 80px 0;
+
+}
+
+.insights .container {
+    padding: 0;
+}
+
+.insight img {
+    height: 400px;
+    width: auto;
+}
 
 /* Footer */
 .footer {
@@ -433,11 +447,11 @@ main
 
 
 /* About Page */
-.about-head {
-    padding: 40px 200px 90px;
+.head {
+    padding: 60px 200px 100px;
 }
 
-.about-head .grid {
+.about .grid {
     grid-template-columns: 40% 60%;
 }
 
@@ -446,6 +460,10 @@ main
     font-optical-sizing: auto;
     font-weight: 400 ;
     line-height: 1.2;
+    padding-bottom: 20px;
+}
+
+.about-title p {
     padding-bottom: 20px;
 }
 
@@ -471,222 +489,36 @@ main
     height: auto;
 }
 
+.join {
+    padding-bottom: 120px;
+}
 
-/* Insights & Statistics */
-.insights{
+.join a.lg-btn {
+    color: black;
+}
+
+.articles {
     padding: 80px 0;
-
 }
 
-.accordion-wrap{
-    height: 500px;
-    max-width: 100%;
-    display: flex;
-    position: relative;
-    margin: 0px;
+.articles .container {
+    align-items: start;
 }
 
-#insights-intro{
-    display: flex;
-    overflow: hidden;
+
+.access img {
+    width: 50vmax;
 }
 
-.insights-tab{
-    width: 50px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #068932;
+.access .download {
+    justify-content: center !important;
+    padding-bottom: 40px;
+    gap: 20px;
+    
 }
 
-.insights-tab h3{
-    color: #fff;
-    transform: rotate(-90deg);
-    font-weight: 500;
-}
-
-.insights-content{
-    width: 450px;
-    padding: 15px;
-    /*
-    -moz-transition: width 0.4s ease-out;
-    transition: width 0.4s ease-out;
-  */
-}
-
-.insights-content button{
-    color: #068932;
-    font-weight: bold;
-    background-color: white;
-    border: none;
-}
-
-.insights-content button:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-}
-
-.hide{
-    width: 0px;
-    overflow: hidden;
-    padding: 0px;
-}
-
-.description ul{
-    display: inherit;
-    list-style-type: circle;
-    padding-inline-start: 40px;
-}
-/*--code for insight cards--*/
-
-.all-insights{
-    position: relative;
-    float: left;
-    padding: 0px;
-    margin: 0px;
-}
-
-.insight{
-    position: absolute;
-    display: flex;
-}
-
-.insight:nth-child(1){
-    left: 0%;
-}
-
-.insight:nth-child(2){
-    left: 175px;
-}
-
-.insight:nth-child(3){
-    left: 350px;
-}
-
-/*--code for insight cards tab covers--*/
-.all-insights .tab-cover{
-    width: 170px;
-    height: 500px;
-    border: 1px solid #000;
-    padding: 24px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.cover-content{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.tab-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.exercise .tab-bg{
-    width: 150%;
-    top: 100px;
-    left: -25px;
-}
-
-.weekly .tab-bg{
-    width: 110%;
-    top: 20px;
-    left: -10px;
-}
-
-.progress .tab-bg{
-    width: 100%;
-    top: 25px;
-}
-
-.inactive .tab-bg{
-    opacity: 0.6;
-}
-
-.tab-cover:hover{
-    cursor: pointer;
-}
-
-.cover-content h4{
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.cover-content button{
-    width: 80px;
-    height: 30px;
-    color: #000;
-    font-size: 12px;
-    font-weight: 600;
-    background-color: #fff;
-    border: 2px solid #068932;
-    border-radius: 15px;
-}
-
-.active button{
-    visibility: hidden;
-}
-
-.inactive button{
-    background-color: #068932;
-    color: #fff;
-}
-
-.tab-cover button:hover{
-    background-color: #068932;
-    color: #fff;
-}
-
-.item-content{
-    width: 0px;
-    height: 500px;
-    overflow: hidden;
-    /*
-    -moz-transition: width 0.4s ease-out;
-    transition: width 0.4s ease-out;
-    */
-}
-
-.active .item-content{
-    width: 500px;
-    padding: 20px 40px;
-    overflow-y: auto;
-    display: inline;
-    background-color: #f5f5f5;
-}
-
-.item-content p{
-    margin-bottom: 5px;
-}
-
-.insight-link{
-    display: block;
-    position: relative;
-    padding: 10px;
-    margin-bottom: 5px;
-    width: 100%;
-    background-color: #d9d9d9;
-    border-radius: 2px;
-}
-
-.insight-link:hover{
-    background-color: #b1b1b1;
-    color: #fff !important;
-}
-
-.insight-link i{
-    position: absolute;
-    right: 10px;
-    top: 15px;
+.access p {
+    padding: 0 80px 20px;
 }
 
 
@@ -696,13 +528,14 @@ main
 @media(max-width: 786px) {
     .grid,
     .hero .grid,
-    .features .grid,
+    .features .grid
+    .insightss .grid .grid-3,
     .insights .grid,
     .download .grid, 
     .footer .grid,
     .about-head .grid,
     .team-members .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .features .flip {
@@ -772,12 +605,12 @@ main
         display: inline;
     }
 
-    .about-head {
+    .head {
         padding: 40px 40px 80px;
     }
 
     .team-title {
-        padding: 0;
+        padding: 0 0 40px;
     }
 }
 

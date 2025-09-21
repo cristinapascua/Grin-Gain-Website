@@ -22,6 +22,19 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.sm-btn {
+    display: inline-block;
+    padding: 6px 15px;
+    font-size: 14px;
+    width: fit-content;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
 .lg-btn:hover {
